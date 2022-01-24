@@ -22,9 +22,8 @@ class EmailTemplate implements ArgumentInterface
             && $this->request->getParam('template_id')
         ) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public function getTemplateId()
