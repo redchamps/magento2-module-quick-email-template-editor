@@ -3,4 +3,7 @@
     <type name="Magento\Config\Block\System\Config\Form\Field">
         <plugin name="redmonks_quickEmailTemplateEditor_config_field" type="RedMonks\QuickEmailTemplateEditor\Plugin\MagentoConfig\System\Form\Field"/>
     </type>
+    <type name="Magento\Backend\Block\Widget\Button\Toolbar">
+        <plugin name="redmonks_quickEmailTemplateEditor_backToConfigButton" type="RedMonks\QuickEmailTemplateEditor\Plugin\Block\Widget\Button\ToolbarPlugin" />
+    </type>
 </config>

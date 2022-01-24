@@ -1,5 +1,5 @@
 {
-    "name": "redmonks/magento2-module-quick-email-template-editor",
+    "name": "redmonks/module-quick-email-template-editor",
     "description": "Access email template editor direct from admin configuration setting",
     "require": {
         "magento/module-email": "*"
