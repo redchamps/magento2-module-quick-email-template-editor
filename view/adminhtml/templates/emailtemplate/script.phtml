@@ -1,0 +1,17 @@
+<?php
+/* @var $block Magento\Framework\View\Element\Template */
+$viewModel = $block->getViewModel();
+
+if ($viewModel->isNewTemplate()) { $templateId = $viewModel->getTemplateId(); ?>
+    <script>
+        var checkOptions = setInterval(function (){
+            var optionsElement = document.getElementById('template_select');
+            var targetElement = document.getElementById('load');
+            if (optionsElement.length > 0) {
+                optionsElement.value = '<?=$templateId?>';
+                targetElement.click();
+            }
+            clearInterval(checkOptions);
+        }, 500)
+    </script>
+<?php } ?>

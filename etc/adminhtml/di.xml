@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Config\Block\System\Config\Form\Field">
+        <plugin name="redmonks_quickEmailTemplateEditor_config_field" type="RedMonks\QuickEmailTemplateEditor\Plugin\MagentoConfig\System\Form\Field"/>
+    </type>
+</config>

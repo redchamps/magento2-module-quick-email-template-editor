@@ -1,0 +1,18 @@
+{
+    "name": "redmonks/magento2-module-quick-email-template-editor",
+    "description": "Access email template editor direct from admin configuration setting",
+    "require": {
+        "magento/module-email": "*"
+    },
+    "type": "magento2-module",
+    "license": "OSL-3.0",
+    "version": "1.0.0",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "RedMonks\\QuickEmailTemplateEditor\\": ""
+        }
+    }
+}
