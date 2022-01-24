@@ -6,4 +6,19 @@
     <type name="Magento\Backend\Block\Widget\Button\Toolbar">
         <plugin name="redmonks_quickEmailTemplateEditor_backToConfigButton" type="RedMonks\QuickEmailTemplateEditor\Plugin\Block\Widget\Button\ToolbarPlugin" />
     </type>
+    <type name="\RedMonks\QuickEmailTemplateEditor\Plugin\MagentoConfig\System\Form\Field">
+        <arguments>
+            <argument name="allowedSourceModels" xsi:type="array">
+                <item name="core_template" xsi:type="string">Magento\Config\Model\Config\Source\Email\Template</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Email\Model\Template">
+        <plugin sortOrder="1" name="redMonksQuickEmailTemplateEditorAbstractModel"
+                type="RedMonks\QuickEmailTemplateEditor\Plugin\Model\TemplatePlugin"/>
+    </type>
+    <type name="Magento\Email\Controller\Adminhtml\Email\Template\Save">
+        <plugin sortOrder="1" name="redMonksQuickEmailTemplateEditorSave"
+                type="RedMonks\QuickEmailTemplateEditor\Plugin\Controller\EmailTemplateSavePlugin"/>
+    </type>
 </config>

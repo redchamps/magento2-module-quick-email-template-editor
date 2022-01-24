@@ -1,19 +1,21 @@
+<?php /* @var $block Magento\Framework\View\Element\Template */?>
+
 <?php
-/* @var $block Magento\Framework\View\Element\Template */
+/* @var $viewModel \RedMonks\QuickEmailTemplateEditor\ViewModel\EmailTemplate */
 $viewModel = $block->getViewModel();
 ?>
 
-<?php if ($viewModel->isNewTemplate()) { ?>
-    <?php $templateId = $viewModel->getTemplateId(); ?>
+<?php if ($viewModel->isNewTemplate()):?>
     <script>
         var checkOptions = setInterval(function (){
             var optionsElement = document.getElementById('template_select');
             var targetElement = document.getElementById('load');
             if (optionsElement.length > 0) {
-                optionsElement.value = '<?=$templateId?>';
+                optionsElement.value = '<?= $viewModel->getTemplateId()?>';
                 targetElement.click();
+                document.getElementById('template_code').value = '<?= $viewModel->getTemplateName()?>';
             }
             clearInterval(checkOptions);
-        }, 500)
+        }, 500);
     </script>
-<?php } ?>
+<?php endif; ?>
