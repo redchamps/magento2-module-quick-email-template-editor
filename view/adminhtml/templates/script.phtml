@@ -1,0 +1,23 @@
+<?php /* @var $block Magento\Framework\View\Element\Template */?>
+
+<?php
+/* @var $viewModel \RedMonks\QuickEmailTemplateEditor\ViewModel\EmailTemplate */
+$viewModel = $block->getViewModel();
+?>
+
+<?php if ($viewModel->isNewTemplate()):?>
+    <script>
+        window.addEventListener("load", function() {
+            var checkOptions = setInterval(function () {
+                var optionsElement = document.getElementById('template_select');
+                var targetElement = document.getElementById('load');
+                if (optionsElement.length > 0) {
+                    optionsElement.value = '<?= $viewModel->getTemplateId()?>';
+                    document.getElementById('template_code').value = '<?= $viewModel->getTemplateName()?>';
+                    clearInterval(checkOptions);
+                    targetElement.click();
+                }
+            }, 100);
+        });
+    </script>
+<?php endif; ?>
