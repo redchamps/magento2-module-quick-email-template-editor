@@ -15,6 +15,10 @@ The click on this "**Edit Template**" button will take you directly to the email
 
 > composer require redmonks/module-quick-email-template-editor
 
+## How it works
+
+![How it works](https://raw.githubusercontent.com/redchamps/repo-images/master/quick-email-template-editor/quick-email-template-editor.gif)
+
 ## Authors
 
 - RedMonks [Maintainer] [![Twitter Follow](https://img.shields.io/twitter/follow/_redMonks.svg?style=social)](https://twitter.com/_redMonks)
