@@ -36,41 +36,33 @@ class Field
     public function afterRender(BaseField $subject, $result, $element)
     {
         $originalData = $element->getOriginalData();
-        if (isset($originalData['source_model']) && $this->isEmailTemplateSelectBox($originalData) && $element->getValue()) {
-            $configPath = $this->encoder->encode(isset($originalData['config_path'])?$originalData['config_path']:$originalData['path']."/".$originalData['id']);
-            if (is_numeric($element->getValue())) {
-                return $this->appendHtml(__('Edit'), $this->getEditTemplateUrl($element->getValue(), $configPath), $result);
-            } else {
-                return $this->appendHtml(__('Add'), $this->getNewEmailTemplateUrl($element->getValue(), $configPath), $result);
-            }
+        if (isset($originalData['source_model'])
+            && in_array($originalData['source_model'], $this->allowedSourceModels)
+            && $element->getValue()) {
+            return $this->appendHtml($result, $element);
         }
         return $result;
     }
 
-    private function isEmailTemplateSelectBox($originalData)
+    private function appendHtml($result, $element)
     {
-        return in_array($originalData['source_model'], $this->allowedSourceModels);
-    }
-
-    private function appendHtml($label, $action, $result)
-    {
-        $result = str_replace('<select ', '<select style="width:85%;" ', $result);
-        return str_replace('</select>','</select><a class="action-default " href="'.$action.'">'.$label.'</a>', $result);
-    }
-
-    private function getEditTemplateUrl($id, $configPath)
-    {
-        return $this->url->getUrl(
-            'adminhtml/email_template/edit',
-            ['id' => $id, 'return_path' => $this->getCurrentPath(), 'config_path' => $configPath]
+        $originalData = $element->getOriginalData();
+        $configPath = $this->encoder->encode(isset($originalData['config_path'])?$originalData['config_path']:$originalData['path']."/".$originalData['id']);
+        $result = str_replace('<select ', '<select style="width:69%;" ', $result);
+        return str_replace(
+            '</select>',
+            '</select><a class="action-default " href="'.$this->getEditTemplateUrl($element->getValue(), $configPath).'">'.__('Edit Template').'</a>',
+            $result
         );
     }
 
-    private function getNewEmailTemplateUrl($templateId, $configPath)
+    private function getEditTemplateUrl($templateId, $configPath)
     {
+        $path = is_numeric($templateId)?'adminhtml/email_template/edit':'adminhtml/email_template/new';
+        $identifier = is_numeric($templateId)?'id':'template_id';
         return $this->url->getUrl(
-            'adminhtml/email_template/new',
-            ['template_id' => $templateId, 'return_path' => $this->getCurrentPath(), 'config_path' => $configPath]
+            $path,
+            [$identifier => $templateId, 'return_path' => $this->getCurrentPath(), 'config_path' => $configPath]
         );
     }
 
@@ -80,8 +72,11 @@ class Field
         if (isset($params[UrlInterface::SECRET_KEY_PARAM_NAME])) {
             unset($params[UrlInterface::SECRET_KEY_PARAM_NAME]);
         }
-        $url = $this->request->getRouteName().'/'.$this->request->getControllerName().'/'.$this->request->getActionName().$this->makeParamString($params);
-        return $this->encoder->encode($url);
+        $url = implode(
+            '/',
+            [$this->request->getRouteName(), $this->request->getControllerName(), $this->request->getActionName()]
+        );
+        return $this->encoder->encode($url.$this->makeParamString($params));
     }
 
     private function makeParamString($params)

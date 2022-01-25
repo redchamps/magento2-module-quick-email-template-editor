@@ -10,7 +10,6 @@ use RedMonks\QuickEmailTemplateEditor\Registry\LastSavedTemplate;
 class EmailTemplateSavePlugin
 {
     private $lastSavedTemplate;
-
     private $decoder;
     private $configWriter;
     private $cacheTypeList;
@@ -29,19 +28,31 @@ class EmailTemplateSavePlugin
 
     public function afterExecute(Save $subject, $result)
     {
+        if ($this->lastSavedTemplate->get()) {
+            $this->savConfig($subject);
+            $this->setRedirectPath($subject);
+        }
+        return $result;
+    }
+
+    protected function savConfig($subject)
+    {
         $configPath = $subject->getRequest()->getParam('config_path');
         if ($configPath && $subject->getRequest()->getParam('template_id')) {
             $this->configWriter->save(
-               $this->decoder->decode($configPath),
-               $this->lastSavedTemplate->get()->getId()
+                $this->decoder->decode($configPath),
+                $this->lastSavedTemplate->get()->getId()
             );
             $this->cacheTypeList->cleanType('config');
         }
+    }
+
+    protected function setRedirectPath($subject)
+    {
         if($subject->getRequest()->getParam('return_path')) {
             $subject->getResponse()->setRedirect(
                 $subject->getUrl($this->decoder->decode($subject->getRequest()->getParam('return_path')))
             );
         }
-        return $result;
     }
 }
