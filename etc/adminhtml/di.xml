@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <type name="Magento\Config\Block\System\Config\Form\Field">
-        <plugin name="redmonks_quickEmailTemplateEditor_config_field" type="RedMonks\QuickEmailTemplateEditor\Plugin\MagentoConfig\System\Form\Field"/>
+        <plugin name="redchamps_quickEmailTemplateEditor_config_field" type="RedChamps\QuickEmailTemplateEditor\Plugin\MagentoConfig\System\Form\Field"/>
     </type>
     <type name="Magento\Backend\Block\Widget\Button\Toolbar">
-        <plugin name="redmonks_quickEmailTemplateEditor_backToConfigButton" type="RedMonks\QuickEmailTemplateEditor\Plugin\Block\Widget\Button\ToolbarPlugin" />
+        <plugin name="redchamps_quickEmailTemplateEditor_backToConfigButton" type="RedChamps\QuickEmailTemplateEditor\Plugin\Block\Widget\Button\ToolbarPlugin" />
     </type>
-    <type name="\RedMonks\QuickEmailTemplateEditor\Plugin\MagentoConfig\System\Form\Field">
+    <type name="\RedChamps\QuickEmailTemplateEditor\Plugin\MagentoConfig\System\Form\Field">
         <arguments>
             <argument name="allowedSourceModels" xsi:type="array">
                 <item name="core_template" xsi:type="string">Magento\Config\Model\Config\Source\Email\Template</item>
@@ -15,10 +15,10 @@
     </type>
     <type name="Magento\Email\Model\Template">
         <plugin sortOrder="1" name="redMonksQuickEmailTemplateEditorAbstractModel"
-                type="RedMonks\QuickEmailTemplateEditor\Plugin\Model\TemplatePlugin"/>
+                type="RedChamps\QuickEmailTemplateEditor\Plugin\Model\TemplatePlugin"/>
     </type>
     <type name="Magento\Email\Controller\Adminhtml\Email\Template\Save">
         <plugin sortOrder="1" name="redMonksQuickEmailTemplateEditorSave"
-                type="RedMonks\QuickEmailTemplateEditor\Plugin\Controller\EmailTemplateSavePlugin"/>
+                type="RedChamps\QuickEmailTemplateEditor\Plugin\Controller\EmailTemplateSavePlugin"/>
     </type>
 </config>

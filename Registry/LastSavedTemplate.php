@@ -1,5 +1,5 @@
 <?php
-namespace RedMonks\QuickEmailTemplateEditor\Registry;
+namespace RedChamps\QuickEmailTemplateEditor\Registry;
 
 class LastSavedTemplate
 {

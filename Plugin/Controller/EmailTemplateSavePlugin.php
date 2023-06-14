@@ -1,5 +1,5 @@
 <?php
-namespace RedMonks\QuickEmailTemplateEditor\Plugin\Controller;
+namespace RedChamps\QuickEmailTemplateEditor\Plugin\Controller;
 
 use Magento\Email\Controller\Adminhtml\Email\Template\Save;
 use Magento\Framework\App\Config\ReinitableConfigInterface;
@@ -7,7 +7,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\Config\Storage\WriterInterface;
 use Magento\Framework\Url\DecoderInterface;
 use Magento\Store\Model\ScopeInterface;
-use RedMonks\QuickEmailTemplateEditor\Registry\LastSavedTemplate;
+use RedChamps\QuickEmailTemplateEditor\Registry\LastSavedTemplate;
 
 class EmailTemplateSavePlugin
 {

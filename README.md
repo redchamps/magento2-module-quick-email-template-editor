@@ -1,8 +1,8 @@
 # Quick Email Template Editor - Magento 2 Extension 
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/redmonks/module-quick-email-template-editor.svg?style=flat-square)](https://packagist.org/packages/redmonks/module-quick-email-template-editor)
-[![Packagist](https://img.shields.io/packagist/dt/redmonks/module-quick-email-template-editor.svg?style=flat-square)](https://packagist.org/packages/redmonks/module-quick-email-template-editor/stats)
-[![Packagist](https://img.shields.io/packagist/dm/redmonks/module-quick-email-template-editor.svg?style=flat-square)](https://packagist.org/packages/redmonks/module-quick-email-template-editor/stats)
+[![Latest Stable Version](https://img.shields.io/packagist/v/redchamps/module-quick-email-template-editor.svg?style=flat-square)](https://packagist.org/packages/redchamps/module-quick-email-template-editor)
+[![Packagist](https://img.shields.io/packagist/dt/redchamps/module-quick-email-template-editor.svg?style=flat-square)](https://packagist.org/packages/redchamps/module-quick-email-template-editor/stats)
+[![Packagist](https://img.shields.io/packagist/dm/redchamps/module-quick-email-template-editor.svg?style=flat-square)](https://packagist.org/packages/redchamps/module-quick-email-template-editor/stats)
 
 This extension will add "**Edit Template**" button next to each email template select box in Store > Configuration. 
 
@@ -12,7 +12,7 @@ The click on this "**Edit Template**" button will take you directly to the email
 
 ## Installation
 
-> composer require redmonks/module-quick-email-template-editor
+> composer require redchamps/module-quick-email-template-editor
 
 ## How it works
 
@@ -20,7 +20,7 @@ The click on this "**Edit Template**" button will take you directly to the email
 
 ## Authors
 
-- RedMonks [Maintainer] [![Twitter Follow](https://img.shields.io/twitter/follow/_redMonks.svg?style=social)](https://twitter.com/_redMonks)
+- RedChamps [Maintainer] [![Twitter Follow](https://img.shields.io/twitter/follow/_redChamps.svg?style=social)](https://twitter.com/_redChamps)
 
 - Sanchit [Maintainer] [![Twitter Follow](https://img.shields.io/twitter/follow/_techDriven.svg?style=social)](https://twitter.com/_techDriven)
 
@@ -32,4 +32,4 @@ This project is licensed under the OSL-3.0 License.
 
 ## ADS
 
-Please visit our [store](https://redchamps.com) for more free/paid extensions from us OR visit us at [store](https://redmonks.agency) for development services.
+Please visit our [store](https://redchamps.com) for more free/paid extensions from us.

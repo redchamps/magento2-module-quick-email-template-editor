@@ -2,9 +2,9 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <block name="script.new.email" template="RedMonks_QuickEmailTemplateEditor::script.phtml">
+            <block name="script.new.email" template="RedChamps_QuickEmailTemplateEditor::script.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">RedMonks\QuickEmailTemplateEditor\ViewModel\EmailTemplate</argument>
+                    <argument name="view_model" xsi:type="object">RedChamps\QuickEmailTemplateEditor\ViewModel\EmailTemplate</argument>
                 </arguments>
             </block>
         </referenceContainer>

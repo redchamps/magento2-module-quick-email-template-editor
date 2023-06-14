@@ -1,5 +1,5 @@
 {
-    "name": "redmonks/module-quick-email-template-editor",
+    "name": "redchamps/module-quick-email-template-editor",
     "description": "Access email template editor direct from admin configuration setting",
     "require": {
         "magento/module-email": "*"
@@ -11,7 +11,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "RedMonks\\QuickEmailTemplateEditor\\": ""
+            "RedChamps\\QuickEmailTemplateEditor\\": ""
         }
     }
 }

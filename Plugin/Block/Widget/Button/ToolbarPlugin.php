@@ -1,5 +1,5 @@
 <?php
-namespace RedMonks\QuickEmailTemplateEditor\Plugin\Block\Widget\Button;
+namespace RedChamps\QuickEmailTemplateEditor\Plugin\Block\Widget\Button;
 
 use Magento\Framework\Url\DecoderInterface;
 use Magento\Framework\View\Element\AbstractBlock;

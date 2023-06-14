@@ -1,6 +1,6 @@
 <?php
 
-namespace RedMonks\QuickEmailTemplateEditor\ViewModel;
+namespace RedChamps\QuickEmailTemplateEditor\ViewModel;
 
 use Magento\Email\Model\Template\Config;
 use Magento\Framework\App\RequestInterface;

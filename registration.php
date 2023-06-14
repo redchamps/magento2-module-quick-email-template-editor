@@ -5,6 +5,6 @@ use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'RedMonks_QuickEmailTemplateEditor',
+    'RedChamps_QuickEmailTemplateEditor',
     __DIR__
 );

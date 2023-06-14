@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace RedMonks\QuickEmailTemplateEditor\Plugin\MagentoConfig\System\Form;
+namespace RedChamps\QuickEmailTemplateEditor\Plugin\MagentoConfig\System\Form;
 
 use Magento\Backend\Model\UrlInterface;
 use Magento\Config\Block\System\Config\Form\Field as BaseField;

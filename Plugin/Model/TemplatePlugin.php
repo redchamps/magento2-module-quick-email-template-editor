@@ -1,8 +1,8 @@
 <?php
-namespace RedMonks\QuickEmailTemplateEditor\Plugin\Model;
+namespace RedChamps\QuickEmailTemplateEditor\Plugin\Model;
 
 use Magento\Email\Model\Template;
-use RedMonks\QuickEmailTemplateEditor\Registry\LastSavedTemplate;
+use RedChamps\QuickEmailTemplateEditor\Registry\LastSavedTemplate;
 
 class TemplatePlugin
 {
