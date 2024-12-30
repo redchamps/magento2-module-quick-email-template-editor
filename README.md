@@ -8,6 +8,10 @@ This extension will add "**Edit Template**" button next to each email template s
 
 The click on this "**Edit Template**" button will take you directly to the email template edit interface & saving the template changes will redirect you back to the same configuration page. 
 
+## Compatibility
+
+Compatible with Magento 2.4.7-p3
+
 ![Edit Template Button](https://raw.githubusercontent.com/redchamps/repo-images/master/quick-email-template-editor/edit-template-button.jpeg)
 
 ## Installation
